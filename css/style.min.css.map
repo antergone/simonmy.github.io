@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/home/runner/work/simonmy.githuib.io-hugo/simonmy.githuib.io-hugo",
+	"sourceRoot": "/home/runner/work/simonmy.github.io-hugo/simonmy.github.io-hugo",
 	"sources": [
 		"themes/LoveIt/assets/css/style.scss",
 		"themes/LoveIt/assets/css/_variables.scss",
