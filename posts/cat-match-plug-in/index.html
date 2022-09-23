@@ -1,0 +1,215 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>如何通关羊了个羊 - Simon (Yu Ma)</title><meta name=Description content="Progress is the activity of today and the assurance of tomorrow."><meta property="og:title" content="如何通关羊了个羊"><meta property="og:description" content="最近见到很多朋友都在“羊了个羊”，饭桌羊，公交羊，地铁羊，反正哪哪儿都是羊。此时此刻，我就记录一下，我是如何做一只脚本羊。 获取Token 这个"><meta property="og:type" content="article"><meta property="og:url" content="https://simonmy.com/posts/cat-match-plug-in/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-05-08T18:00:00+08:00"><meta property="article:modified_time" content="2022-05-08T18:00:00+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="如何通关羊了个羊"><meta name=twitter:description content="最近见到很多朋友都在“羊了个羊”，饭桌羊，公交羊，地铁羊，反正哪哪儿都是羊。此时此刻，我就记录一下，我是如何做一只脚本羊。 获取Token 这个"><meta name=application-name content="Simon (Yu Ma)"><meta name=apple-mobile-web-app-title content="Simon (Yu Ma)"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://simonmy.com/posts/cat-match-plug-in/><link rel=prev href=https://simonmy.com/posts/mac%E4%BD%BF%E7%94%A8tar%E5%91%BD%E4%BB%A4%E6%89%93%E5%8C%85%E5%A4%9A%E5%87%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/><link rel=next href=https://simonmy.com/posts/changing-the-git-history-of-your-repository-using-a-script/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"如何通关羊了个羊","inLanguage":"en-us","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/simonmy.com\/posts\/cat-match-plug-in\/"},"genre":"posts","wordcount":916,"url":"https:\/\/simonmy.com\/posts\/cat-match-plug-in\/","datePublished":"2022-05-08T18:00:00+08:00","dateModified":"2022-05-08T18:00:00+08:00","publisher":{"@type":"Organization","name":"Simon (Yu Ma)"},"author":{"@type":"Person","name":"Simon (Yu Ma)"},"description":""}</script></head><body header-desktop header-mobile><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":""==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:""==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Simon (Yu Ma)">Simon (Yu Ma)</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/tags/>Tags </a><a class=menu-item href=/categories/>Categories </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Simon (Yu Ma)">Simon (Yu Ma)</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/ title>Posts</a><a class=menu-item href=/tags/ title>Tags</a><a class=menu-item href=/categories/ title>Categories</a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">如何通关羊了个羊</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>Simon (Yu Ma)</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D/><i class="far fa-folder fa-fw"></i>杂技浅尝</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-08 18:00">2022-05-08 18:00</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 916 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#获取token>获取Token</a><ul><li><a href=#ios>iOS</a></li><li><a href=#android>Android</a></li><li><a href=#windows>Windows</a></li></ul></li><li><a href=#源代码python>源代码(Python)</a><ul><li><a href=#2022年09月24日-更新>2022年09月24日 更新</a></li></ul></li><li><a href=#参考>参考</a></li></ul></nav></div></div><div class=content id=content><p>最近见到很多朋友都在“羊了个羊”，饭桌羊，公交羊，地铁羊，反正哪哪儿都是羊。此时此刻，我就记录一下，我是如何做一只脚本羊。</p><h2 id=获取token>获取Token</h2><p>这个步骤大家自行研究，随便你用啥工具，抓到请求Header里面的<code>t</code>就行，在这里就不浪费大家时间了。</p><h3 id=ios>iOS</h3><p>略</p><h3 id=android>Android</h3><p>略</p><h3 id=windows>Windows</h3><p>略</p><h2 id=源代码python>源代码(Python)</h2><h3 id=2022年09月24日-更新>2022年09月24日 更新</h3><ol><li>根据吾爱破解大佬的分析文章，解决提交时地图数据缺失的问题</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=ch>#!/usr/bin/python3 </span>
+</span></span><span class=line><span class=cl><span class=c1># -*- coding: utf-8 -*-</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>requests</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>time</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>struct</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>base64</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>describe</span> <span class=o>=</span> <span class=s1>&#39;&#39;&#39;
+</span></span></span><span class=line><span class=cl><span class=s1>usage: python|python3 main.py
+</span></span></span><span class=line><span class=cl><span class=s1>
+</span></span></span><span class=line><span class=cl><span class=s1>description: 该程序用于羊了个羊快速通关, 可刷新通关次数
+</span></span></span><span class=line><span class=cl><span class=s1>author: simon.my
+</span></span></span><span class=line><span class=cl><span class=s1>website: www.simonmy.com
+</span></span></span><span class=line><span class=cl><span class=s1>update: 2022-09-24 01:08:20
+</span></span></span><span class=line><span class=cl><span class=s1>&#39;&#39;&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 配置项</span>
+</span></span><span class=line><span class=cl><span class=n>token</span><span class=o>=</span> <span class=s1>&#39;此处替换成自己的TOKEN&#39;</span>
+</span></span><span class=line><span class=cl><span class=n>executeTimes</span> <span class=o>=</span> <span class=mi>999</span>
+</span></span><span class=line><span class=cl><span class=n>winCount</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>headers</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=s1>&#39;Accept&#39;</span><span class=p>:</span> <span class=s1>&#39;*/*&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=s1>&#39;Accept-Encoding&#39;</span><span class=p>:</span> <span class=s1>&#39;gzip,compress,br,deflate&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=s1>&#39;Connection&#39;</span><span class=p>:</span> <span class=s1>&#39;keep-alive&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=s1>&#39;content-type&#39;</span><span class=p>:</span> <span class=s1>&#39;application/json&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=c1># Android使用下面的 UA和 Refer</span>
+</span></span><span class=line><span class=cl>    <span class=c1># &#39;Referer&#39;: &#39;https://servicewechat.com/wx141bfb9b73c970a9/27/page-frame.html&#39;,</span>
+</span></span><span class=line><span class=cl>    <span class=c1># &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Linux; Android 12; M2012K11C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/4313 MMWEBSDK/20220805 Mobile Safari/537.36 MMWEBID/4629 MicroMessenger/8.0.27.2220(0x28001B37) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android&#39;,</span>
+</span></span><span class=line><span class=cl>    <span class=s1>&#39;Referer&#39;</span><span class=p>:</span> <span class=s1>&#39;https://servicewechat.com/wx141bfb9b73c970a9/27/page-frame.html&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=s1>&#39;User-Agent&#39;</span><span class=p>:</span> <span class=s1>&#39;Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.27(0x18001b37) NetType/WIFI Language/zh_CN&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=s1>&#39;t&#39;</span><span class=p>:</span> <span class=n>token</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>getMapUrl</span> <span class=o>=</span> <span class=s1>&#39;https://cat-match.easygame2021.com/sheep/v1/game/map_info_ex?matchType=3&#39;</span>
+</span></span><span class=line><span class=cl><span class=n>reportUrl</span> <span class=o>=</span> <span class=s1>&#39;https://cat-match.easygame2021.com/sheep/v1/game/game_over_ex?&#39;</span>
+</span></span><span class=line><span class=cl><span class=n>getInfoUrl</span> <span class=o>=</span> <span class=s1>&#39;https://cat-match.easygame2021.com/sheep/v1/game/personal_info?&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>getTime</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>time</span><span class=o>.</span><span class=n>strftime</span><span class=p>(</span><span class=s2>&#34;%Y-%m-</span><span class=si>%d</span><span class=s2>-%H_%M_%S&#34;</span><span class=p>,</span> <span class=n>time</span><span class=o>.</span><span class=n>localtime</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 检查token</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>checkToken</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>    <span class=k>global</span> <span class=n>winCount</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>token</span> <span class=o>==</span> <span class=s1>&#39;&#39;</span> <span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=s2>&#34;请配置token&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>result</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>getInfoUrl</span><span class=p>,</span> <span class=n>headers</span><span class=o>=</span><span class=n>headers</span><span class=p>)</span><span class=o>.</span><span class=n>json</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>result</span><span class=p>[</span><span class=s1>&#39;err_code&#39;</span><span class=p>]</span> <span class=o>!=</span> <span class=mi>0</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=n>result</span><span class=p>[</span><span class=s1>&#39;err_msg&#39;</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>            <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=s2>&#34;token过期或配置不正确&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>winCount</span> <span class=o>=</span> <span class=n>result</span><span class=p>[</span><span class=s1>&#39;data&#39;</span><span class=p>][</span><span class=s1>&#39;win_count&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>            <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=n>result</span><span class=p>[</span><span class=s1>&#39;data&#39;</span><span class=p>][</span><span class=s1>&#39;nick_name&#39;</span><span class=p>],</span> <span class=s2>&#34;: 当前通关次数为&#34;</span><span class=p>,</span> <span class=n>winCount</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>except</span> <span class=ne>Exception</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=s2>&#34;请求失败, 请检查token过期或配置不正确&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>execute</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>    <span class=k>global</span> <span class=n>winCount</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>executeTimes</span><span class=p>):</span> 
+</span></span><span class=line><span class=cl>        <span class=n>r</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>getMapUrl</span><span class=p>,</span> <span class=n>headers</span><span class=o>=</span><span class=n>headers</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=c1># 休眠60s, 否则无法更新记录成功</span>
+</span></span><span class=line><span class=cl>        <span class=n>map_md5</span> <span class=o>=</span> <span class=n>r</span><span class=o>.</span><span class=n>json</span><span class=p>()[</span><span class=s1>&#39;data&#39;</span><span class=p>][</span><span class=s1>&#39;map_md5&#39;</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=s2>&#34;今日地图md5:&#34;</span><span class=p>,</span> <span class=n>map_md5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>url</span> <span class=o>=</span> <span class=sa>f</span><span class=s1>&#39;https://cat-match-static.easygame2021.com/maps/</span><span class=si>{</span><span class=n>map_md5</span><span class=si>}</span><span class=s1>.txt&#39;</span>  <span class=c1># 由于每天获取的地图不一样，需要计算地图大小</span>
+</span></span><span class=line><span class=cl>        <span class=n>r</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>url</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>levelData</span> <span class=o>=</span> <span class=n>r</span><span class=o>.</span><span class=n>json</span><span class=p>()[</span><span class=s1>&#39;levelData&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>h</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=nb>sum</span><span class=p>(</span><span class=n>levelData</span><span class=o>.</span><span class=n>values</span><span class=p>(),</span> <span class=p>[]))):</span>  <span class=c1># 生成操作序列</span>
+</span></span><span class=line><span class=cl>            <span class=n>p</span><span class=o>.</span><span class=n>append</span><span class=p>({</span><span class=s1>&#39;chessIndex&#39;</span><span class=p>:</span> <span class=mi>127</span> <span class=k>if</span> <span class=n>h</span> <span class=o>&gt;</span> <span class=mi>127</span> <span class=k>else</span> <span class=n>h</span><span class=p>,</span> <span class=s1>&#39;timeTag&#39;</span><span class=p>:</span> <span class=mi>127</span> <span class=k>if</span> <span class=n>h</span> <span class=o>&gt;</span> <span class=mi>127</span> <span class=k>else</span> <span class=n>h</span><span class=p>})</span>
+</span></span><span class=line><span class=cl>        <span class=n>GAME_DAILY</span> <span class=o>=</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl>        <span class=n>GAME_TOPIC</span> <span class=o>=</span> <span class=mi>4</span>
+</span></span><span class=line><span class=cl>        <span class=n>data</span> <span class=o>=</span> <span class=n>struct</span><span class=o>.</span><span class=n>pack</span><span class=p>(</span><span class=s1>&#39;BB&#39;</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=n>GAME_DAILY</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>p</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>c</span><span class=p>,</span> <span class=n>t</span> <span class=o>=</span> <span class=n>i</span><span class=o>.</span><span class=n>values</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>            <span class=n>data</span> <span class=o>+=</span> <span class=n>struct</span><span class=o>.</span><span class=n>pack</span><span class=p>(</span><span class=s1>&#39;BBBBBB&#39;</span><span class=p>,</span> <span class=mi>34</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=n>c</span><span class=p>,</span> <span class=mi>16</span><span class=p>,</span> <span class=n>t</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>MatchPlayInfo</span> <span class=o>=</span> <span class=n>base64</span><span class=o>.</span><span class=n>b64encode</span><span class=p>(</span><span class=n>data</span><span class=p>)</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mi>60</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>result</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=n>reportUrl</span><span class=p>,</span> <span class=n>headers</span><span class=o>=</span><span class=n>headers</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>                                <span class=n>json</span><span class=o>=</span><span class=p>{</span><span class=s1>&#39;rank_score&#39;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span> <span class=s1>&#39;rank_state&#39;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span> <span class=s1>&#39;rank_time&#39;</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span> <span class=s1>&#39;rank_role&#39;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span> <span class=s1>&#39;skin&#39;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span> <span class=s1>&#39;MatchPlayInfo&#39;</span><span class=p>:</span> <span class=n>MatchPlayInfo</span><span class=p>})</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=s1>&#39;上传结果&#39;</span><span class=p>,</span> <span class=n>result</span><span class=o>.</span><span class=n>text</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=c1># 检查是否更新成功        </span>
+</span></span><span class=line><span class=cl>        <span class=n>info</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>getInfoUrl</span><span class=p>,</span> <span class=n>headers</span><span class=o>=</span><span class=n>headers</span><span class=p>)</span><span class=o>.</span><span class=n>json</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=n>newWinCount</span> <span class=o>=</span> <span class=n>info</span><span class=p>[</span><span class=s1>&#39;data&#39;</span><span class=p>][</span><span class=s1>&#39;win_count&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=n>newWinCount</span> <span class=o>==</span> <span class=n>winCount</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=s1>&#39;更新失败, 可能被羊了个羊小程序拉黑&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=s1>&#39;更新成功, 通关次数&#39;</span><span class=p>,</span> <span class=n>winCount</span><span class=p>,</span> <span class=s1>&#39;-&gt;&#39;</span><span class=p>,</span> <span class=n>newWinCount</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>winCount</span> <span class=o>=</span> <span class=n>newWinCount</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 主函数</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>main</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>describe</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>checkToken</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>getTime</span><span class=p>(),</span> <span class=s1>&#39;刷新通关次数(每次需要1分钟):&#39;</span><span class=p>,</span> <span class=n>executeTimes</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>execute</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>main</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=参考>参考</h2><p>羊了个羊MatchPlayInfo序列化分析: <a href=https://www.52pojie.cn/thread-1690631-1-1.html target=_blank rel="noopener noreffer">https://www.52pojie.cn/thread-1690631-1-1.html</a></p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2022-05-08 18:00</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span></span></div></div></div><div class=post-info-more><section class=post-tags></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/posts/mac%E4%BD%BF%E7%94%A8tar%E5%91%BD%E4%BB%A4%E6%89%93%E5%8C%85%E5%A4%9A%E5%87%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6/ class=prev rel=prev title=Mac使用tar命令打包多出隐藏文件><i class="fas fa-angle-left fa-fw"></i>Mac使用tar命令打包多出隐藏文件</a>
+<a href=/posts/changing-the-git-history-of-your-repository-using-a-script/ class=next rel=next title="Changing the Git history of your repository using a script">Changing the Git history of your repository using a script<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=disqus_thread class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://disqus.com/?ref_noscript>Disqus</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.103.1">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank></a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><script type=text/javascript src=https://simonmy.disqus.com/embed.js defer></script><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.js></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:50},comment:{}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-6GP123JQ3E",{anonymize_ip:!0})</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=G-6GP123JQ3E" async></script></body></html>
