@@ -262,10 +262,10 @@
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>execute</span><span class=p>(</span><span class=n>finished_times</span><span class=p>):</span>
 </span></span><span class=line><span class=cl>    
 </span></span><span class=line><span class=cl>    <span class=n>level_data</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>map_md5</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span>
 </span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>execute_times</span><span class=p>):</span>
 </span></span><span class=line><span class=cl>        <span class=n>r</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>get_map_url</span><span class=p>,</span> <span class=n>headers</span><span class=o>=</span><span class=n>headers</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>				<span class=n>map_md5</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=cl>        
 </span></span><span class=line><span class=cl>        <span class=n>current_map_md5</span> <span class=o>=</span> <span class=n>r</span><span class=o>.</span><span class=n>json</span><span class=p>()[</span><span class=s1>&#39;data&#39;</span><span class=p>][</span><span class=s1>&#39;map_md5&#39;</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=c1># 检查地图是否更新，重新下载新的地图数据</span>
